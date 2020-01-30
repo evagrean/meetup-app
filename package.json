@@ -2,7 +2,7 @@
   "name": "meetup-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/evagrean/meetup-app.git",
+  "homepage": "https://evagrean.github.io/meetup-app",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
