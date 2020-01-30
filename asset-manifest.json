@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/evagrean/meetup-app.git/static/css/main.d1b05096.chunk.css",
+    "main.js": "/evagrean/meetup-app.git/static/js/main.9d55719b.chunk.js",
+    "main.js.map": "/evagrean/meetup-app.git/static/js/main.9d55719b.chunk.js.map",
+    "runtime-main.js": "/evagrean/meetup-app.git/static/js/runtime-main.b398918e.js",
+    "runtime-main.js.map": "/evagrean/meetup-app.git/static/js/runtime-main.b398918e.js.map",
+    "static/js/2.efea5617.chunk.js": "/evagrean/meetup-app.git/static/js/2.efea5617.chunk.js",
+    "static/js/2.efea5617.chunk.js.map": "/evagrean/meetup-app.git/static/js/2.efea5617.chunk.js.map",
+    "index.html": "/evagrean/meetup-app.git/index.html",
+    "precache-manifest.6c77f670e70a2b78bc4d93324037d997.js": "/evagrean/meetup-app.git/precache-manifest.6c77f670e70a2b78bc4d93324037d997.js",
+    "service-worker.js": "/evagrean/meetup-app.git/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/evagrean/meetup-app.git/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.efea5617.chunk.js.LICENSE": "/evagrean/meetup-app.git/static/js/2.efea5617.chunk.js.LICENSE",
+    "static/media/logo.svg": "/evagrean/meetup-app.git/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b398918e.js",
+    "static/js/2.efea5617.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.9d55719b.chunk.js"
+  ]
+}
