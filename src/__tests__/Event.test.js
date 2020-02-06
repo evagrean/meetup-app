@@ -4,39 +4,75 @@ import Event from '../Event';
 
 
 describe('<Event /> component', () => {
+  let EventWrapper;
+  beforeAll(() => {
+    EventWrapper = shallow(<Event />);
+  });
 
   test('render event container correctly', () => {
-    const EventWrapper = shallow(<Event />);
     expect(EventWrapper.find('.event')).toHaveLength(1);
   });
 
   test('render event time container correctly', () => {
-    const EventWrapper = shallow(<Event />);
     expect(EventWrapper.find('.eventTime')).toHaveLength(1);
   });
 
   test('render event date container correctly', () => {
-    const EventWrapper = shallow(<Event />);
     expect(EventWrapper.find('.eventDate')).toHaveLength(1);
   });
 
   test('render event name container correctly', () => {
-    const EventWrapper = shallow(<Event />);
     expect(EventWrapper.find('.eventName')).toHaveLength(1);
   });
 
   test('render event group name container correctly', () => {
-    const EventWrapper = shallow(<Event />);
     expect(EventWrapper.find('.groupName')).toHaveLength(1);
   });
 
   test('render number of people going container correctly', () => {
-    const EventWrapper = shallow(<Event />);
     expect(EventWrapper.find('.yesRsvpCount')).toHaveLength(1);
   });
 
+  test('render showDetails button', () => {
+    EventWrapper.setState({
+      showDetails: false,
+    });
+    expect(EventWrapper.find('.showDetailsButton')).toHaveLength(1);
+  });
+
+  test('render showLess button', () => {
+    EventWrapper.setState({
+      showDetails: true,
+    });
+    expect(EventWrapper.find('.showLessButton')).toHaveLength(1);
+
+  });
+
+  test('expand event details when showDetails button is clicked', () => {
+    EventWrapper.setState({
+      showDetails: false
+    });
+    EventWrapper.find('.showDetailsButton').simulate('click');
+    expect(EventWrapper.state('showDetails')).toBe(true);
+  });
+
+  test('collapse event details when showLess button is clicked', () => {
+    EventWrapper.setState({
+      showDetails: true
+    });
+    EventWrapper.find('.showLessButton').simulate('click');
+    expect(EventWrapper.state('showDetails')).toBe(false);
+
+  });
+
+  test('render details container when showDetails set to true', () => {
+    EventWrapper.setState({
+      showDetails: false,
+    });
+    EventWrapper.exists('.details');
+  });
+
   test('test correct rendering of event info with mock data', () => {
-    const EventWrapper = shallow(<Event />);
     EventWrapper.setState({
       event: {
         created: 1529409410000,
@@ -83,38 +119,9 @@ describe('<Event /> component', () => {
         how_to_find_us: "Ring the bell for co.up 3rd floor, then come up to the 3rd floor.",
         visibility: "public",
         member_pay_fee: false
-
       }
     });
     expect(EventWrapper.state('event').name).toBe('Berlin.JS')
   });
-
-  test('render details button', () => {
-    const EventWrapper = shallow(<Event />);
-    expect(EventWrapper.find('.detailsButton')).toHaveLength(1);
-  });
-
-  test('check if default state of showDetails for events is false', () => {
-    const EventWrapper = shallow(<Event />);
-    expect(EventWrapper.state('showDetails')).toBe(false);
-  });
-
-  test('show event details when button is clicked', () => {
-    const EventWrapper = shallow(<Event />);
-    EventWrapper.setState({
-      showDetails: false
-    });
-    EventWrapper.find('.detailsButton').simulate('click');
-    expect(EventWrapper.state('showDetails')).toBe(true);
-
-  });
-
-
-
-
-
-
-
-
 
 });

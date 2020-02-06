@@ -5,6 +5,7 @@ import { shallow } from 'enzyme';
 import App from '../App';
 import EventList from '../EventList';
 import CitySearch from '../CitySearch';
+import NumberOfEvents from '../NumberOfEvents';
 
 // new group called <App /> component has been created via describe() function
 describe('<App /> component', () => {
@@ -22,5 +23,9 @@ describe('<App /> component', () => {
   test('render CitySearch', () => {
     expect(AppWrapper.find(CitySearch)).toHaveLength(1);
   });
+
+  test('render number of events', () => {
+    expect(AppWrapper.find(NumberOfEvents)).toHaveLength(1);
+  })
 
 });

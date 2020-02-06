@@ -63,4 +63,6 @@ describe('<CitySearch /> component', () => {
     expect(CitySearchWrapper.state('query')).toBe('Munich, Germany');
   });
 
+
+
 });

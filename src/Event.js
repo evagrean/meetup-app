@@ -9,8 +9,17 @@ class Event extends Component {
   }
 
   handleShowDetails = () => {
-    this.setState({ showDetails: true });
+    if (this.state.showDetails === false) {
+      this.setState({ showDetails: true });
+
+    }
+    else {
+      this.setState({ showDetails: false });
+    }
+
   }
+
+
 
 
   render() {
@@ -21,7 +30,15 @@ class Event extends Component {
         <div className="eventName">{this.state.event.name}</div>
         <div className="groupName"></div>
         <div className="yesRsvpCount"></div>
-        <button className="detailsButton" onClick={() => this.handleShowDetails()}>Details</button>
+        {!this.state.showDetails &&
+          <button className="showDetailsButton" onClick={() => this.handleShowDetails()}>Show Details</button>
+        }
+        {this.state.showDetails &&
+          <button className="showLessButton" onClick={() => this.handleShowDetails()}>Show Less</button>
+        }
+        {this.state.showDetails ? <div className="details"></div> : null}
+
+
       </div>
     );
   }
