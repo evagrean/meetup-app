@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 
 class Event extends Component {
 
+
   state = {
-    event: {},
     showDetails: false,
   }
 
@@ -23,23 +23,27 @@ class Event extends Component {
 
 
   render() {
+    const { event } = this.props;
+
     return (
-      <div className="event">
-        <div className="eventTime"></div>
-        <div className="eventDate"></div>
-        <div className="eventName">{this.state.event.name}</div>
-        <div className="groupName"></div>
-        <div className="yesRsvpCount"></div>
+
+      <div className="Event">
+        <div className="event-time">{event.local_time}</div>
+        <div className="event-date">{event.local_date}</div>
+        <div className="event-name">{event.name}</div>
+        <div className="group-name">Group: {event.group.name}</div>
+        <div className="going"> {event.yes_rsvp_count} People are going</div>
         {!this.state.showDetails &&
           <button className="showDetailsButton" onClick={() => this.handleShowDetails()}>Show Details</button>
         }
         {this.state.showDetails &&
-          <button className="showLessButton" onClick={() => this.handleShowDetails()}>Show Less</button>
+
+          < button className="showLessButton" onClick={() => this.handleShowDetails()}>Show Less</button>
         }
-        {this.state.showDetails ? <div className="details"></div> : null}
+        {this.state.showDetails ? <div className="details" dangerouslySetInnerHTML={{ __html: event.description }}></div> : null}
 
 
-      </div>
+      </div >
     );
   }
 }

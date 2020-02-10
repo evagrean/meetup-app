@@ -5,7 +5,7 @@ import CitySearch from '../CitySearch';
 describe('<CitySearch /> component', () => {
   let CitySearchWrapper;
   beforeAll(() => {
-    CitySearchWrapper = shallow(<CitySearch />);
+    CitySearchWrapper = shallow(<CitySearch updateEvents={() => { }} />);
   });
 
   test('render text input', () => {
@@ -61,6 +61,38 @@ describe('<CitySearch /> component', () => {
     });
     CitySearchWrapper.find('.suggestions li').at(0).simulate('click');
     expect(CitySearchWrapper.state('query')).toBe('Munich, Germany');
+  });
+});
+
+describe('<CitySearch /> integration', () => {
+  //first test: checks whether value of 'suggestions' is equal to a given object(s)
+  test('get a list of cities when user searches for Munich', async () => {
+    const CitySearchWrapper = shallow(<CitySearch />);
+    CitySearchWrapper.find('.city').simulate('change', { target: { value: 'Munich' } });
+    await CitySearchWrapper.update();
+    // Use 'toEqual instead of 'toBe' because values being compared are objects (complex data types).
+    // 'toEqual recursively checks every field of an object or array
+    expect(CitySearchWrapper.state('suggestions')).toEqual([
+      {
+        city: 'Munich',
+        country: 'de',
+        localized_country_name: 'Germany',
+        name_string: 'Munich, Germany',
+        zip: 'meetup3',
+        lat: 48.14,
+        lon: 11.58
+      },
+      {
+        city: 'Munich',
+        country: 'us',
+        localized_country_name: 'USA',
+        state: 'ND',
+        name_string: 'Munich, North Dakota, USA',
+        zip: '58352',
+        lat: 48.66,
+        lon: -98.85
+      }
+    ]);
   });
 
 
