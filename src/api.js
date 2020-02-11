@@ -4,27 +4,32 @@ import axios from 'axios';
 // Integrating meetup API
 // Getting access token
 
-const accessToken = localStorage.getItem('access_token');
+function getAccessToken() {
+  const accessToken = localStorage.getItem('access_token');
 
-if (!accessToken) {
-  const searchParams = new URLSearchParams(window.location.search);
-  const code = searchParams.get('code');
+  if (!accessToken) {
+    const searchParams = new URLSearchParams(window.location.search);
+    const code = searchParams.get('code');
 
-  if (!code) {
-    window.location.href = 'https://secure.meetup.com/oauth2/authorize?client_id=tcnqekvs4ro9d4971mc04i23l7&response_type=code&redirect_uri=https://evagrean.github.io/meetup-app/';
-    return null;
+    if (!code) {
+      window.location.href = 'https://secure.meetup.com/oauth2/authorize?client_id=tcnqekvs4ro9d4971mc04i23l7&response_type=code&redirect_uri=https://evagrean.github.io/meetup-app/';
+      return null;
+    }
+    return getOrRenewAccessToken('get', code);
   }
-  return getOrRenewAccessToken('get', code);
+
+  const lastSavedTime = localStorage.getItem('last_saved_time');
+
+  if (accessToken && (Date.now() - lastSavedTime < 3600000)) {
+    return accessToken;
+  }
+
+  const refreshToken = localStorage.getItem('refresh_token');
+  return getOrRenewAccessToken('renew', refreshToken);
+
 }
 
-const lastSavedTime = localStorage.getItem('last_saved_time');
 
-if (accessToken && (Date.now() - lastSavedTime < 3600000)) {
-  return accessToken;
-}
-
-const refreshToken = localStorage.getItem('refresh_token');
-return getOrRenewAccessToken('renew', refreshToken);
 
 async function getOrRenewAccessToken(type, key) {
   let url;
@@ -115,4 +120,4 @@ async function getEvents(lat, lon) {
 
 }
 
-export { getSuggestions, getEvents };
+export { getSuggestions, getEvents, getAccessToken };
