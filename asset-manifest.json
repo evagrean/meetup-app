@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/meetup-app/static/css/main.d1b05096.chunk.css",
-    "main.js": "/meetup-app/static/js/main.a08a2353.chunk.js",
-    "main.js.map": "/meetup-app/static/js/main.a08a2353.chunk.js.map",
+    "main.css": "/meetup-app/static/css/main.4ccb2f95.chunk.css",
+    "main.js": "/meetup-app/static/js/main.ad04c7cd.chunk.js",
+    "main.js.map": "/meetup-app/static/js/main.ad04c7cd.chunk.js.map",
     "runtime-main.js": "/meetup-app/static/js/runtime-main.7b185fef.js",
     "runtime-main.js.map": "/meetup-app/static/js/runtime-main.7b185fef.js.map",
-    "static/js/2.efea5617.chunk.js": "/meetup-app/static/js/2.efea5617.chunk.js",
-    "static/js/2.efea5617.chunk.js.map": "/meetup-app/static/js/2.efea5617.chunk.js.map",
+    "static/js/2.ef9fedb6.chunk.js": "/meetup-app/static/js/2.ef9fedb6.chunk.js",
+    "static/js/2.ef9fedb6.chunk.js.map": "/meetup-app/static/js/2.ef9fedb6.chunk.js.map",
     "index.html": "/meetup-app/index.html",
-    "precache-manifest.bea5b9a2b44cb7ceb3f789402202b9a4.js": "/meetup-app/precache-manifest.bea5b9a2b44cb7ceb3f789402202b9a4.js",
+    "precache-manifest.f8b395dda76ab6f9ef2ff6c891b60691.js": "/meetup-app/precache-manifest.f8b395dda76ab6f9ef2ff6c891b60691.js",
     "service-worker.js": "/meetup-app/service-worker.js",
-    "static/css/main.d1b05096.chunk.css.map": "/meetup-app/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.efea5617.chunk.js.LICENSE": "/meetup-app/static/js/2.efea5617.chunk.js.LICENSE",
-    "static/media/logo.svg": "/meetup-app/static/media/logo.5d5d9eef.svg"
+    "static/css/main.4ccb2f95.chunk.css.map": "/meetup-app/static/css/main.4ccb2f95.chunk.css.map",
+    "static/js/2.ef9fedb6.chunk.js.LICENSE": "/meetup-app/static/js/2.ef9fedb6.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.7b185fef.js",
-    "static/js/2.efea5617.chunk.js",
-    "static/css/main.d1b05096.chunk.css",
-    "static/js/main.a08a2353.chunk.js"
+    "static/js/2.ef9fedb6.chunk.js",
+    "static/css/main.4ccb2f95.chunk.css",
+    "static/js/main.ad04c7cd.chunk.js"
   ]
 }
