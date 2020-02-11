@@ -5,9 +5,6 @@ import Event from './Event';
 
 class EventList extends Component {
 
-
-
-
   render() {
     return (
       <ul className="EventList">
