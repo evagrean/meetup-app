@@ -1,10 +1,27 @@
+/*Colors*/
+
+:root {
+  --main-bg-color: #121b74;
+  --second-bg-color: #2d248a;
+  --main-color: #614ad3;
+  --signal-color: #e42c64;
+  --text-color: white;
+}
+
 .App {
   text-align: center;
   padding: 2% 5%;
+  font-size: 14px;
+ 
 }
 
 .App * {
   box-sizing: border-box;
+}
+
+h1 {
+  color: var(--signal-color);
+  font-size: 40px;
 }
 
 ul {
@@ -20,11 +37,13 @@ input[type="text"], input[type="number"] {
   padding: 8px 6px 8px 10px;
   border-radius: 4px;
   outline: none;
-  border: 1px solid #ccc;
-  font-size: 14px;
+  border: none;
+  font-size: 18px;
   line-height: 20px;
   align-self: center;
   height: 38px;
+  background: var(--second-bg-color);
+  color: var(--text-color);
 }
 
 .number {
@@ -52,7 +71,7 @@ input[type="text"], input[type="number"] {
 .suggestions > li {
   text-align: left;
   padding: 8px 6px 8px 10px;
-  background-color: #eee;
+  background-color: var(--text-color) ;
   cursor: default;
 }
 
@@ -63,16 +82,19 @@ input[type="text"], input[type="number"] {
 
 
 .suggestions > li:hover {
-  background-color: #BCDCDB;
+  background-color: var(--signal-color);
 }
 
 .Event {
   padding: 10px 10px 20px;
   margin-bottom: 10px;
   text-align: left;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 4px;
   position: relative;
+  background: var(--second-bg-color);
+  color: var(--text-color);
+ 
 }
 
 .showDetailsButton {
@@ -81,8 +103,10 @@ input[type="text"], input[type="number"] {
   bottom: 5px;
   padding: 5px 8px;
   border-radius: 4px;
-  outline: none;
+  border: none;
   cursor: pointer;
+  background: var(--main-color);
+  color: var(--text-color);
 }
 
 .showLessButton {
@@ -91,18 +115,37 @@ input[type="text"], input[type="number"] {
   bottom: 5px;
   padding: 5px 8px;
   border-radius: 4px;
-  outline: none;
+  border: none;
   cursor: pointer;
+  background: var(--main-color);
+  color: var(--text-color);
 }
 
+.showDetailsButton:hover, 
+.showLessButton:hover {
+  background: var(--second-bg-color);
+  color: var(--text-color)
+}
+
+.time-and-date {
+  display: flex;
+  flex-direction: row;
+  
+  
+
+}
 .event-name {
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 600;
+  color: var(--signal-color);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .group-name {
   text-transform: uppercase;
   font-size: 14px;
+  margin-bottom: 5px;
 }
 
 .going, .visibility {
@@ -111,6 +154,7 @@ input[type="text"], input[type="number"] {
 
 .details {
   overflow-x: hidden;
+  margin-top: 10px;
 }
 
 .NumberOfEvents {
@@ -122,6 +166,7 @@ input[type="text"], input[type="number"] {
 
 label {
   margin-bottom: 10px;
+  color: var(--text-color);
 }
 
 

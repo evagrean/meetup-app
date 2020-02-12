@@ -13,7 +13,7 @@ describe('<NumberOfEvents /> component', () => {
   });
 
   test('render input label correctly', () => {
-    expect(NumberOfEventsWrapper.find('label').text()).toBe('Specify number of events to show:');
+    expect(NumberOfEventsWrapper.find('label').text()).toBe('Specify number of events:');
   });
 
   test('render text input correctly', () => {

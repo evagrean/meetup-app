@@ -18,10 +18,6 @@ describe('<Event /> component', () => {
     expect(EventWrapper.find('.event-time')).toHaveLength(1);
   });
 
-  test('render event date container correctly', () => {
-    expect(EventWrapper.find('.event-date')).toHaveLength(1);
-  });
-
   test('render event name container correctly', () => {
     expect(EventWrapper.find('.event-name')).toHaveLength(1);
   });
