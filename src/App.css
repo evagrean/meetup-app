@@ -23,6 +23,10 @@ a.linkified {
   color: var(--signal-color);
 }
 
+a.linkified:visited {
+  color: var(--main-color);
+}
+
 h1 {
   color: var(--signal-color);
   font-size: 40px;
