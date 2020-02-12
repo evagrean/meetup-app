@@ -19,7 +19,7 @@
   box-sizing: border-box;
 }
 
-a:link {
+a.linkified {
   color: var(--signal-color);
 }
 
