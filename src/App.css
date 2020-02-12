@@ -157,6 +157,10 @@ input[type="text"], input[type="number"] {
   margin-top: 10px;
 }
 
+.details > a {
+  color: var(--signal-color);
+}
+
 .NumberOfEvents {
   display: flex;
   flex-direction: column;
