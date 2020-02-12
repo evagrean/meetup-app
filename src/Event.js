@@ -30,7 +30,7 @@ class Event extends Component {
       <div className="Event">
         <div className="event-time">{event.local_time} | {event.local_date}</div>
         <div className="event-name">{event.name}</div>
-        <div className="group-name">Group: {event.group.name}</div>
+        <div className="group-name">{event.group.name}</div>
         <div className="going"> {event.yes_rsvp_count} People are going</div>
         {!this.state.showDetails &&
           <button className="showDetailsButton" onClick={() => this.handleShowDetails()}>Details</button>

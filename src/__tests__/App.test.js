@@ -7,7 +7,9 @@ import App from '../App';
 import EventList from '../EventList';
 import CitySearch from '../CitySearch';
 import NumberOfEvents from '../NumberOfEvents';
+import Event from '../Event';
 import { mockEvents } from '../mock-events';
+
 
 // new group called <App /> component has been created via describe() function
 describe('<App /> component', () => {
@@ -56,8 +58,8 @@ describe('<App /> integration', () => {
 
   test('render correct list of events', () => {
     const AppWrapper = mount(<App />);
-    AppWrapper.setState({ events: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 3 }] });
-    expect(AppWrapper.find('.Event')).toHaveLength(4);
+    AppWrapper.setState({ events: [{ id: 1, name: '', local_time: '', local_date: '', group: { name: '' }, yes_rsvp_count: '' }, { id: 2, name: '', local_time: '', local_date: '', group: { name: '' }, yes_rsvp_count: '' }] });
+    expect(AppWrapper.find('.Event')).toHaveLength(2);
     AppWrapper.unmount();
   });
 
