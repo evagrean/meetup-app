@@ -1,38 +1,48 @@
 import puppeteer from 'puppeteer';
+import { mockEvents } from '../mock-events';
 
 describe('filter events by city', () => {
-
-  test('When user hasn\'t searched for a city, show upcoming events based on the user\'s location by default', async () => {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
+  let browser;
+  let page;
+  beforeAll(async () => {
+    browser = await puppeteer.launch({
+      headless: false,
+      slowMo: 250
+    });
+    page = await browser.newPage();
     await page.goto('http://localhost:3000/');
-
-    browser.close();
+    await page.waitForSelector('.Event');
+    await page.waitForSelector('.CitySearch');
 
 
   });
+  afterAll(() => {
+    browser.close();
+  });
+
+  test('When user hasn\'t searched for a city, show upcoming events based on the user\'s location by default', async () => {
+    const defaultList = await page.$('.Event');
+    expect(defaultList).toBeDefined();
+  }, 10000);
 
   test('User should see a list of suggestions when they search for a city', async () => {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    page.waitForSelector('.CitySearch');
     await page.click('.city');
     await page.type('.city', 'Munich');
     const suggestions = await page.$('.suggestions');
     expect(suggestions).toBeDefined();
-    browser.close();
   });
 
   test('User can select a city from the suggested list', async () => {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    const suggestions = await page.$('.suggestions');
-    expect(suggestions).toBeDefined();
-    await page.click('.suggestions li');
-    // simulate that value of searchbox is 'Munich' ?
-    browser.close();
+
+    // const suggestions = await page.$('.suggestions');
+    // expect(suggestions).toBeDefined();
+    // await page.click('.suggestions li');
+
+    // do I have to simulate that value of searchbox is 'Munich' ?
+
   });
 });
+
 
 describe('show/hide an event details', () => {
   let browser;
