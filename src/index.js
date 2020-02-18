@@ -14,4 +14,4 @@ serviceWorker.unregister();
 atatus.config('36d6334057df4a22835acdca4f049acc').install();
 
 //  Verifies that integration is working
-atatus.notify(new Error('Test Atatus Setup'));
+// atatus.notify(new Error('Test Atatus Setup'));
