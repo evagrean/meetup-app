@@ -5,10 +5,7 @@ describe('filter events by city', () => {
   let browser;
   let page;
   beforeAll(async () => {
-    browser = await puppeteer.launch({
-      headless: false,
-      slowMo: 250
-    });
+    browser = await puppeteer.launch({});
     page = await browser.newPage();
     await page.goto('http://localhost:3000/');
     await page.waitForSelector('.Event');
@@ -23,7 +20,7 @@ describe('filter events by city', () => {
   test('When user hasn\'t searched for a city, show upcoming events based on the user\'s location by default', async () => {
     const defaultList = await page.$('.Event');
     expect(defaultList).toBeDefined();
-  }, 10000);
+  });
 
   test('User should see a list of suggestions when they search for a city', async () => {
     await page.click('.city');
@@ -34,9 +31,9 @@ describe('filter events by city', () => {
 
   test('User can select a city from the suggested list', async () => {
 
-    // const suggestions = await page.$('.suggestions');
-    // expect(suggestions).toBeDefined();
-    // await page.click('.suggestions li');
+    const suggestions = await page.$('.suggestions');
+    expect(suggestions).toBeDefined();
+    await page.click('.suggestions li');
 
     // do I have to simulate that value of searchbox is 'Munich' ?
 
