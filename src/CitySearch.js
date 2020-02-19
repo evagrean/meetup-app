@@ -11,17 +11,19 @@ class CitySearch extends Component {
   handleInputChanged = (event) => {
     const value = event.target.value;
     this.setState({ query: value });
-    getSuggestions(value).then(suggestions => this.setState({ suggestions }));
+    getSuggestions(value).then(suggestions => {
+      this.setState({ suggestions });
 
-    if (value && suggestions.length === 0) {
-      this.setState({
-        infoText: 'We can not find the city you are looking for. Please try another city',
-      });
-    } else {
-      this.setState({
-        infoText: '',
-      });
-    }
+      if (value && suggestions.length === 0) {
+        this.setState({
+          infoText: 'We can not find the city you are looking for. Please try another city',
+        });
+      } else {
+        this.setState({
+          infoText: '',
+        });
+      }
+    });
   }
 
   handleItemClicked = (value, lat, lon) => {
