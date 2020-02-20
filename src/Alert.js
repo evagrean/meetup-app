@@ -37,6 +37,7 @@ class InfoAlert extends Alert {
       color: this.color,
       fontStyle: 'italic',
       marginBottom: '10px',
+      minHeight: '30.2px'
     }
   }
 }
@@ -54,6 +55,7 @@ class ErrorAlert extends Alert {
       color: this.color,
       fontStyle: 'italic',
       marginTop: '10px',
+      minHeight: '30.2px',
     }
   }
 }
