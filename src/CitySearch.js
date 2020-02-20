@@ -6,6 +6,7 @@ class CitySearch extends Component {
   state = {
     query: '',
     suggestions: [],
+    infoText: '',
   }
 
   handleInputChanged = (event) => {

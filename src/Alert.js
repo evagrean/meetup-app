@@ -12,6 +12,7 @@ class Alert extends Component {
   getStyle = () => {
     return {
       color: this.color,
+
     };
   }
 
@@ -28,11 +29,33 @@ class Alert extends Component {
 class InfoAlert extends Alert {
   constructor(props) {
     super(props);
-    this.color = 'yellow';
+    this.color = 'lightblue';
+  }
+
+  getStyle = () => {
+    return {
+      color: this.color,
+      fontStyle: 'italic',
+      marginBottom: '10px',
+    }
   }
 }
 
 
 // Subclass ErrorAlert
+class ErrorAlert extends Alert {
+  constructor(props) {
+    super(props);
+    this.color = '#e42c64';
+  }
 
-export { InfoAlert };
+  getStyle = () => {
+    return {
+      color: this.color,
+      fontStyle: 'italic',
+      marginTop: '10px',
+    }
+  }
+}
+
+export { InfoAlert, ErrorAlert };

@@ -15,6 +15,7 @@ class App extends Component {
     lat: null,
     lon: null,
     infoText: '',
+    errorText: '',
   }
 
   updateEvents = (lat, lon, page) => {
