@@ -35,7 +35,10 @@ describe('filter events by city', () => {
     expect(suggestions).toBeDefined();
     await page.click('.suggestions li');
 
-    // do I have to simulate that value of searchbox is 'Munich' ?
+    expect('.Event').toBeDefined();
+
+
+
 
   });
 });
