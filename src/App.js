@@ -13,7 +13,8 @@ class App extends Component {
     events: [],
     page: null,
     lat: null,
-    lon: null
+    lon: null,
+    infoText: '',
   }
 
   updateEvents = (lat, lon, page) => {
