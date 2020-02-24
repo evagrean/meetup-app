@@ -40,6 +40,7 @@ class App extends Component {
         <CitySearch updateEvents={this.updateEvents} />
         <EventList events={this.state.events} />
         <NumberOfEvents updateEvents={this.updateEvents} numberOfEvents={this.state.events.length} />
+        <p className="about">Project for <a href="https://careerfoundry.com/en/courses/become-a-web-developer/" target="_blank" rel="noopener noreferrer">CareerFoundry</a> Full-Stack Immersion Course. Coded by <a href="https://github.com/evagrean" target="_blank" rel="noopener noreferrer">Eva Greiner-Anzenbacher</a></p>
       </div>
     );
   }

@@ -5,6 +5,7 @@
   --second-bg-color: #2d248a;
   --main-color: #614ad3;
   --signal-color: #e42c64;
+  --signal-shaded: #b62350;
   --text-color: white;
 }
 
@@ -177,6 +178,18 @@ input[type="text"], input[type="number"] {
 label {
   margin-bottom: 10px;
   color: var(--text-color);
+}
+
+.about {
+  color: var(--main-color);
+}
+
+.about a {
+  color: var(--signal-shaded);
+}
+
+.about a:hover {
+  color: var(--signal-color);
 }
 
 
