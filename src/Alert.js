@@ -60,4 +60,18 @@ class ErrorAlert extends Alert {
   }
 }
 
-export { InfoAlert, ErrorAlert };
+// Subclass WarningAlert
+class WarningAlert extends Alert {
+  constructor(props) {
+    super(props);
+    this.color = '#F8F8FF'
+  }
+
+  getStype = () => {
+    return {
+      color: this.color,
+    }
+  }
+}
+
+export { InfoAlert, ErrorAlert, WarningAlert };
