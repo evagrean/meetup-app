@@ -70,7 +70,7 @@ class WarningAlert extends Alert {
   getStyle = () => {
     return {
       color: this.color,
-      fontStyle: bold,
+      textTransform: 'uppercase',
     }
   }
 }
