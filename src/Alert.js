@@ -67,7 +67,7 @@ class WarningAlert extends Alert {
     this.color = '#f8f8ff'
   }
 
-  getStype = () => {
+  getStyle = () => {
     return {
       color: this.color,
       textTransform: uppercase,
