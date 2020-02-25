@@ -3,7 +3,8 @@ import './App.css';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
-import { getEvents } from './api.js';
+import { getEvents } from './api';
+import { WarningAlert } from './Alert';
 
 
 class App extends Component {
@@ -14,11 +15,16 @@ class App extends Component {
     page: null,
     lat: null,
     lon: null,
-    infoText: '',
-    errorText: '',
+    warningText: '',
   }
 
   updateEvents = (lat, lon, page) => {
+    if (!navigator.onLine) {
+      this.setState({ warningText: 'You are currently offline. Events loaded from your last session' });
+    } else {
+      this.setState({ waringText: '' });
+    }
+
     if (lat && lon) {
       getEvents(lat, lon, this.state.page).then(events => this.setState({ events, lat, lon }));
     } if (page) {
@@ -39,6 +45,7 @@ class App extends Component {
         <h1>GetTogether</h1>
         <CitySearch updateEvents={this.updateEvents} />
         <EventList events={this.state.events} />
+        <WarningAlert text={this.state.warningText} />
         <NumberOfEvents updateEvents={this.updateEvents} numberOfEvents={this.state.events.length} />
         <p className="about">Project for <a href="https://careerfoundry.com/en/courses/become-a-web-developer/" target="_blank" rel="noopener noreferrer">CareerFoundry</a> Full-Stack Immersion Course. Coded by <a href="https://github.com/evagrean" target="_blank" rel="noopener noreferrer">Eva Greiner-Anzenbacher</a></p>
       </div>

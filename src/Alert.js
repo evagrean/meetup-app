@@ -64,12 +64,13 @@ class ErrorAlert extends Alert {
 class WarningAlert extends Alert {
   constructor(props) {
     super(props);
-    this.color = '#F8F8FF'
+    this.color = '#e42c64'
   }
 
   getStype = () => {
     return {
       color: this.color,
+      fontStyle: 'italic',
     }
   }
 }
