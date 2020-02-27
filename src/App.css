@@ -34,7 +34,7 @@ a.linkified:visited {
 h1 {
   color: var(--signal-color);
   font-size: 40px;
-  margin: 0;
+  text-align: center !important,
 }
 
 ul {
@@ -96,6 +96,17 @@ input[type="text"], input[type="number"] {
 
 .suggestions > li:hover {
   background-color: var(--signal-color);
+}
+
+.recharts-responsive-container {
+max-width: 1000px;
+margin: 0 auto;
+padding-left: 0,
+}
+
+.EventList {  
+  margin: 0 auto;
+  max-width: 1000px;
 }
 
 .Event {
@@ -174,8 +185,6 @@ input[type="text"], input[type="number"] {
   overflow-x: hidden;
   margin-top: 10px;
 }
-
-
 
 .NumberOfEvents {
   display: flex;
