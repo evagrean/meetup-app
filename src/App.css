@@ -34,6 +34,7 @@ a.linkified:visited {
 h1 {
   color: var(--signal-color);
   font-size: 40px;
+  margin: 0;
 }
 
 ul {
@@ -180,7 +181,7 @@ input[type="text"], input[type="number"] {
   display: flex;
   flex-direction: column;
   width: 250px;
-  margin: 20px auto;
+  margin: 10px auto;
 }
 
 label {
