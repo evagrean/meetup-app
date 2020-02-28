@@ -3,7 +3,7 @@
 :root {
  --main-bg-color: #121b74;
  --second-bg-color: #2d248a;
-  --main-color: #614ad3;
+  --main-color: #3614ad;
   --signal-color: #e42c64;
   --signal-shaded: #b62350;
   --text-color: white;
@@ -34,7 +34,7 @@ a.linkified:visited {
 h1 {
   color: var(--signal-color);
   font-size: 40px;
-  text-align: center !important,
+  text-align: center !important;
 }
 
 ul {
@@ -101,7 +101,7 @@ input[type="text"], input[type="number"] {
 .recharts-responsive-container {
 max-width: 1000px;
 margin: 0 auto;
-padding-left: 0,
+
 }
 
 .EventList {  
