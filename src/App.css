@@ -130,7 +130,7 @@ margin: 0 auto;
   border: none;
   cursor: pointer;
   background: var(--signal-color);
-  color: var(--text-color);
+  color: var(--second-bg-color);
 }
 
 .showLessButton {
@@ -142,7 +142,7 @@ margin: 0 auto;
   border: none;
   cursor: pointer;
   background: var(--signal-color);
-  color: var(--text-color);
+  color: var(--second-bg-color);
 }
 
 .showDetailsButton:hover, 
