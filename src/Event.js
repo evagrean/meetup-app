@@ -37,7 +37,7 @@ class Event extends Component {
 
   render() {
     const { event } = this.props;
-    let colors = ['#e42c64', '#fff'];
+    let colors = ['#ff971d', '#ffe8d6'];
 
 
     return (

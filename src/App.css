@@ -1,13 +1,13 @@
 /*Colors*/
 
 :root {
- --main-bg-color: #121b74;
- --second-bg-color: #2d248a;
-  --main-color: #3614ad;
-  --signal-color: #e42c64;
-  --signal-shaded: #b62350;
-  --text-color: white;
-  --second-text-color: lightgrey;
+ --main-bg-color: #f9f6f7;
+ --second-bg-color: #FFFFFF;
+  --main-color: #ffe8d6;
+  --signal-color: #ff971d;
+  --signal-shaded: #B26914;
+  --text-color: #191919;
+  --second-text-color: #5E5E5E;
 }
 
 .App {
@@ -84,7 +84,7 @@ input[type="text"], input[type="number"] {
 .suggestions > li {
   text-align: left;
   padding: 8px 6px 8px 10px;
-  background-color: var(--text-color) ;
+  background-color: var(--second-bg-color) ;
   cursor: default;
 }
 
@@ -95,7 +95,7 @@ input[type="text"], input[type="number"] {
 
 
 .suggestions > li:hover {
-  background-color: var(--signal-color);
+  background-color: var(--main-color);
 }
 
 .recharts-responsive-container {
@@ -199,7 +199,7 @@ label {
 }
 
 .about {
-  color: var(--main-color);
+  color: var(--second-text-color);
 }
 
 .about a {
