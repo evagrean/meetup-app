@@ -29,12 +29,11 @@ a.linkified:visited {
   color: var(--main-color);
 }
 
-
-
 h1 {
   color: var(--text-color);
   font-size: 40px;
   text-align: center !important;
+  margin-bottom: 0;
 }
 
 ul {
@@ -61,12 +60,19 @@ input[type="text"], input[type="number"] {
 
 .number {
   width: 80px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-
+.label-elements {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .city {
-  width: 250px;
+  width: 260px;
+  margin-top: 0;
 }
 
 .CitySearch {
