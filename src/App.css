@@ -118,6 +118,7 @@ margin: 0 auto;
 .EventList {  
   margin: 0 auto;
   max-width: 1000px;
+  overflow: hidden;
 }
 
 .Event {
