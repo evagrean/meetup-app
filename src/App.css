@@ -114,11 +114,11 @@ margin: 0 auto;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 .EventList {  
   margin: 0 auto;
   max-width: 1000px;
-  overflow: hidden;
 }
 
 .Event {
