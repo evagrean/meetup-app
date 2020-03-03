@@ -110,6 +110,11 @@ margin: 0 auto;
 
 }
 
+.stick {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
 .EventList {  
   margin: 0 auto;
   max-width: 1000px;
