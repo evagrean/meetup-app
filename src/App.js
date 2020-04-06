@@ -69,25 +69,24 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="stick">
-          <h1>GetTogether</h1>
-          <WarningAlert text={this.state.warningText} />
-          <CitySearch updateEvents={this.updateEvents} />
-          <NumberOfEvents updateEvents={this.updateEvents} numberOfEvents={this.state.events.length} />
-          <ResponsiveContainer height={400}>
-            <ScatterChart
-              margin={{
-                top: 20, right: 20, bottom: 20, left: -20,
-              }}
-            >
-              <CartesianGrid />
-              <XAxis type="category" dataKey="date" name="date" />
-              <YAxis type="number" dataKey="number" name="number of events" allowDecimals={false} />
-              <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-              <Scatter data={this.getData()} fill="#ff971d" />
-            </ScatterChart>
-          </ResponsiveContainer>
-        </div>
+        <h1>GetTogether</h1>
+        <WarningAlert text={this.state.warningText} />
+        <CitySearch updateEvents={this.updateEvents} />
+        <NumberOfEvents updateEvents={this.updateEvents} numberOfEvents={this.state.events.length} />
+        <ResponsiveContainer height={400}>
+          <ScatterChart
+            margin={{
+              top: 20, right: 20, bottom: 20, left: -20,
+            }}
+          >
+            <CartesianGrid />
+            <XAxis type="category" dataKey="date" name="date" />
+            <YAxis type="number" dataKey="number" name="number of events" allowDecimals={false} />
+            <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+            <Scatter data={this.getData()} fill="#ff971d" />
+          </ScatterChart>
+        </ResponsiveContainer>
+
         <EventList events={this.state.events} />
         <p className="about">Project for <a href="https://careerfoundry.com/en/courses/become-a-web-developer/" target="_blank" rel="noopener noreferrer">CareerFoundry</a> Full-Stack Immersion Course. Coded by <a href="https://github.com/evagrean" target="_blank" rel="noopener noreferrer">Eva Greiner-Anzenbacher</a></p>
       </div>
